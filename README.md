@@ -83,13 +83,5 @@ We welcome contributions from the community! If you'd like to contribute, please
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
-
-If you have any questions, feel free to reach out!
-
-- **Author**: [Your Name](https://github.com/yourusername)
-- **Email**: your.email@example.com
-
----
 
 Enjoy playing **Guess Who: One Piece Edition** and may the best pirate win! 🏴‍☠️✨
