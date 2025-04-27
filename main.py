@@ -1,5 +1,5 @@
 import pygame
-import api
+#import api
 import io
 import random
 import pyperclip
@@ -20,7 +20,7 @@ screen_size = (width, height)
 background_image = pygame.transform.scale(background, screen_size)
 font = pygame.font.Font('freesansbold.ttf', 15)
 
-grid = (8, 6)
+grid = (4, 3)
 nb_case = grid[0]*grid[1]
 tile_size = (width/grid[0] - width/(grid[0]+(grid[0]*4)), height/grid[1] - height/(grid[1]+(grid[1]*2.5)) )
 cross = pygame.transform.scale(pygame.image.load("cross.png"), tile_size)
@@ -29,7 +29,7 @@ print(tile_size)
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption('One Piece Guess Who')
 
-with open('log.txt', 'r') as fichier:
+with open('log_clean.txt', 'r') as fichier:
     # Lis toutes les lignes du fichier
     images = fichier.readlines()
 # Supprime les retours à la ligne et autres caractères indésirables
