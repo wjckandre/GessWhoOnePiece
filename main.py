@@ -20,10 +20,11 @@ screen_size = (width, height)
 background_image = pygame.transform.scale(background, screen_size)
 font = pygame.font.Font('freesansbold.ttf', 15)
 
-grid = (4, 3)
+grid = (4, 4)
 nb_case = grid[0]*grid[1]
 tile_size = (width/grid[0] - width/(grid[0]+(grid[0]*4)), height/grid[1] - height/(grid[1]+(grid[1]*2.5)) )
 cross = pygame.transform.scale(pygame.image.load("cross.png"), tile_size)
+greenCross = pygame.transform.scale(pygame.image.load("green_cross.png"), tile_size)
 print(tile_size)
 
 screen = pygame.display.set_mode((width, height))
@@ -120,6 +121,7 @@ while running:
             pos = pygame.mouse.get_pos()  # Obtient la position de la souris
             for rect in tiles:
                 if rect[0].collidepoint(pos):  # Vérifie si le rectangle est cliqué
+                    display(rect[1], rect[0].topleft)
                     display(cross, rect[0].topleft)
             if seed_button.collidepoint(pos):
                 pyperclip.copy(seed)
@@ -132,5 +134,11 @@ while running:
             for rect in tiles:
                 if rect[0].collidepoint(pos):  # Vérifie si le rectangle est cliqué
                     display(rect[1], rect[0].topleft)
-
+        elif event.button == 2:
+            pos = pygame.mouse.get_pos()
+            for rect in tiles:
+                if rect[0].collidepoint(pos):
+                    display(rect[1], rect[0].topleft)
+                    display(greenCross, rect[0].topleft)
+                    
     pygame.display.flip()
